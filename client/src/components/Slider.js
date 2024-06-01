@@ -4,10 +4,8 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import pic from "../assets/pic.png";
 import pic2 from "../assets/pic2.png";
 import pic3 from "../assets/pic3.png";
-
-
 import { useState } from "react";
-
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
 width:100%;
@@ -15,7 +13,7 @@ height:100vh;
 display:flex;
 position:relative;
 overflow: hidden;
-
+${mobile({display:"none"})}
 `;
 
 const Arrow = styled.div`
@@ -52,7 +50,7 @@ width:100vw;
 height:100vh;
 display:flex;
 align-items:center;
-background-color:#${props => props.bg}
+background-color:#${props => props.bg};
 
 `
 
